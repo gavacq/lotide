@@ -11,7 +11,11 @@ const eqArrays = (arr1, arr2) => {
 };
 
 // Tests
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);
+if (process.argv[2] === "testEqArrays") {
+  assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+  assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);
+  assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);
+  assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);
+}
+
+module.exports = eqArrays;
