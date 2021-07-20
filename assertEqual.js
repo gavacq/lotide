@@ -7,8 +7,10 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+module.exports = assertEqual;
+
 // TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual("foo123", "foo123");
-assertEqual(42, 69);
+// assertEqual("Lighthouse Labs", "Bootcamp");
+// assertEqual(1, 1);
+// assertEqual("foo123", "foo123");
+// assertEqual(42, 69);
