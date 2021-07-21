@@ -1,7 +1,7 @@
 const assertEqual = require('./assertEqual');
 
 const eqArrays = (arr1, arr2) => {
-  if (!arr1 || !arr2) {
+  if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
     return false;
   }
 
