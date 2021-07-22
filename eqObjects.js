@@ -21,6 +21,8 @@ const eqObjects = (obj1, obj2) => {
   return true;
 };
 
+module.exports = eqObjects;
+
 // Tests
 if (process.argv[2] === "testEqObjects") {
   const ab = { a: "1", b: "2" };
