@@ -1,4 +1,5 @@
 const assertEqual = require('./assertEqual');
+const inspect = require("util").inspect;
 
 const eqArrays = (arr1, arr2) => {
   if (!Array.isArray(arr1) || !Array.isArray(arr2) || arr1.length !== arr2.length) {
@@ -8,6 +9,9 @@ const eqArrays = (arr1, arr2) => {
   for (let i = 0; i < arr1.length; i++) {
     if (Array.isArray(arr1[i])) return eqArrays(arr1[i], arr2[i]);
     else if (arr1[i] !== arr2[i]) {
+      // console.log("Array 1:", inspect(arr1));
+      // console.log("Array 2:", inspect(arr2));
+
       return false;
     }
   }
