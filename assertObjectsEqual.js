@@ -18,3 +18,5 @@ if (process.argv[2] === "testAssertObjectsEqual") {
   const abc = { a: "1", b: "2", c: "3" };
   assertObjectsEqual(ab, abc); // => false
 }
+
+module.exports = assertObjectsEqual;
