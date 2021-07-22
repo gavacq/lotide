@@ -7,8 +7,7 @@ const eqObjects = (obj1, obj2) => {
   if (!isObj(obj1) || !isObj(obj2) ||
       Object.keys(obj1).length !== Object.keys(obj2).length) return false;
 
-  // Check primitives
-  for (let key in obj1) {
+  for (const key in obj1) {
     if (Array.isArray(obj1[key])) {
       if (!eqArrays(obj1[key], obj2[key])) return false;
     } else if (isObj(obj1[key])) {
