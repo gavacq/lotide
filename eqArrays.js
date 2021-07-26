@@ -7,10 +7,11 @@ const eqArrays = (arr1, arr2) => {
   }
 
   for (let i = 0; i < arr1.length; i++) {
-    if (Array.isArray(arr1[i])) return eqArrays(arr1[i], arr2[i]);
-    else if (arr1[i] !== arr2[i]) {
-      // console.log("Array 1:", inspect(arr1));
-      // console.log("Array 2:", inspect(arr2));
+    if (Array.isArray(arr1[i])) {
+      if (!eqArrays(arr1[i], arr2[i])) return false;
+    } else if (arr1[i] !== arr2[i]) {
+      console.log("Array 1:", inspect(arr1));
+      console.log("Array 2:", inspect(arr2));
 
       return false;
     }
@@ -28,6 +29,9 @@ if (process.argv[2] === "testEqArrays") {
   assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3", 4]), false);
   assertEqual(eqArrays([1, [2, [3, 5]]], [1, [2, [3, 5]]]), true);
   assertEqual(eqArrays([1, [2, [3, 5]]], [1, [2, [3, "5"]]]), false);
+  assertEqual(eqArrays([[2, 3], [4]], [[2, 3], [4]]), true); // => true
+  assertEqual(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]]), false); // => false
+  assertEqual(eqArrays([[2, 3], [4]], [[2, 3], 4]), false); // => false
 }
 
 module.exports = eqArrays;
