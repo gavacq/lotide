@@ -1,7 +1,7 @@
 const assertArraysEqual = require('./assertArraysEqual');
 
-const without = (array, excluded) => {
-  return array.filter(element => excluded.includes(element) === false);
+const without = (array, itemsToExclude) => {
+  return array.filter(element => itemsToExclude.includes(element) === false);
 };
 
 // Tests

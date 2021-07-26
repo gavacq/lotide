@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@gacquroff/lotide",
   "version": "1.0.0",
-  "description": "## Summary A simplified Lodash clone for Lighthouse Labs bootcamp.",
+  "description": "A simplified Lodash clone for Lighthouse Labs bootcamp.",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,8 +13,13 @@
     "type": "git",
     "url": "git+https://github.com/geecrypt/lotide.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "lodash",
+    "LighthouseLabs"
+  ],
+  "author": "Gavin Acquroff",
+  "email": "gacquroff@gmail.com",
+  "url": "acquroff.io",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/geecrypt/lotide/issues"
