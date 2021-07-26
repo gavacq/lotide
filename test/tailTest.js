@@ -1,15 +1,23 @@
-const assertEqual = require("../assertEqual");
+const expect = require("chai").expect;
 const tail = require("../tail");
 
-// Test Case: Check the original array
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-const wordsTail = tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
-assertEqual(wordsTail[0], words[1]);
-assertEqual(wordsTail[1], words[2]);
-
-const singleElem = ["single"];
-assertEqual(tail(singleElem).length, 0);
-
-const emptyArray = [];
-assertEqual(tail(emptyArray).length, 0);
+describe("#tail", () => {
+  it("should return the last string in an array of strings", () => {
+    const words = ["Yo Yo", "Lighthouse", "Labs"];
+    expect(tail(words)).to.deep.equal(words.slice(1));
+  });
+  it("should not modify the original array", () =>{
+    const words = ["Yo Yo", "Lighthouse", "Labs"];
+    const wordsCopy = words.map(e => e);
+    tail(words);
+    expect(words).to.deep.equal(wordsCopy);
+    expect(words.length).to.equal(3);
+  });
+  it("should return an empty array when given a single element array", () => {
+    const singleElem = ["single"];
+    expect(tail(singleElem)).to.deep.equal([]);
+  });
+  it("should return an empty array when given an empty array", () => {
+    expect(tail([])).to.deep.equal([]);
+  });
+});
