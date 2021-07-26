@@ -18,6 +18,14 @@ if (process.argv[2] === "testMap") {
   assertArraysEqual(results1, output1);
 
   assertArraysEqual(map([], x => x++), []);
-  const arrObjs = [{foo: "bar", bar: "foo"}, {a: 1, b: 2}];
+  const arrObjs = [{
+    foo: "bar",
+    bar: "foo"
+  }, {
+    a: 1,
+    b: 2
+  }];
   assertArraysEqual(map(arrObjs, Object.keys), [["foo", "bar"], ["a", "b"]]);
 }
+
+module.exports = map;

@@ -6,7 +6,7 @@ const letterPositions = string => {
   console.log(string, typeof string);
 
   for (let i = 0; i < string.length; i++) {
-    let char = string[i];
+    const char = string[i];
     if (char !== " ") {
       results[char] = [...(results[char] || []), i];
     }
@@ -35,3 +35,5 @@ if (process.argv[2] === "testLetterPositions") {
   assertEqual(letterPositions(input1).a, undefined);
   assertArraysEqual(Object.getOwnPropertyNames(letterPositions("")), []);
 }
+
+module.exports = letterPositions;

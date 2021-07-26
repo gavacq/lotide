@@ -28,3 +28,5 @@ if (process.argv[2] === "testFindKey") {
     "b": [1, 2, 3, 4]
   }, x => eqArrays(x, [1, 2, 3, 4])), "b");
 }
+
+module.exports = findKey;

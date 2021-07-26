@@ -28,3 +28,5 @@ if (process.argv[2] === "testFindKeyByValue") {
   assertEqual(findKeyByValue({}, "foo"), undefined);
   assertEqual(findKeyByValue(bestTVShowsByGenre, [1, "foo"]), "array"); // Fail because does not work with array values
 }
+
+module.exports = findKeyByValue;

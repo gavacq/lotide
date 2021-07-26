@@ -3,7 +3,7 @@ const assertEqual = require('./assertEqual');
 const countLetter = string => {
   const letterCounts = {};
 
-  for (let letter of string) {
+  for (const letter of string) {
     letterCounts[letter] = (letterCounts[letter] || 0) + 1;
   }
 
@@ -30,3 +30,5 @@ if (process.argv[2] === "testCountLetter") {
   const result2 = countLetter("");
   assertEqual(Object.getOwnPropertyNames(result2)[0], undefined);
 }
+
+module.exports = countLetter;

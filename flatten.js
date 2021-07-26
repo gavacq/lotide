@@ -21,3 +21,5 @@ if (process.argv[2] === "testFlatten") {
   assertArraysEqual(flatten([1, 2, [], 3]), [1, 2, 3]);
   assertArraysEqual(flatten([1, 2, [1, [3, [], [5, "foo"]], 3]]), [1, 2, 1, 3, 5, "foo", 3]);
 }
+
+module.exports = flatten;

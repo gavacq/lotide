@@ -26,3 +26,5 @@ if (process.argv[2] === "testTakeUntil") {
   const output2 = ["I've", "been", "to", "Hollywood"];
   assertArraysEqual(results2, output2);
 }
+
+module.exports = takeUntil;
