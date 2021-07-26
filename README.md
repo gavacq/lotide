@@ -28,7 +28,7 @@ The following functions are currently implemented:
 
 * `head(array)`: Return the first element of `array`
 * `tail(array)`: Return `array` without the first element
-* `middle(array)`: Returns an array containing the middle element of `array` if `array.length` is even. Otherwise returns an array containing the middle two elements.
+* `middle(array)`: Returns an array containing the middle element of `array` if `array.length` is odd. Otherwise returns an array containing the middle two elements.
 * `assertArraysEqual(arr1, arr2)`: Check if two arrays are equal. Does not work on objects nested inside the array. Prints equality message to the console.
 * `assertEqual(value1, value2)`: Check if two primitive values are equal. Prints equality message to the console.
 * `assertObjectsEqual(obj1, obj2)`: Check if two objects are equal. Works with nested objects, but does not work with objects nested inside arrays inside the parent objects.
